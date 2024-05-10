@@ -1,6 +1,9 @@
 // Adam Kaum on 10.05.2024
 
 
+// через list скорее всего можно создать этот список 
+
+
 import SwiftUI
 
 struct ContentView: View {
@@ -11,6 +14,8 @@ struct ContentView: View {
             Color.mainBackground
             
             VStack{
+                
+                    Spacer()
                 
                 MainCategoriesView(imageName: "4pdf",
                                    upperText: "MS Test",
@@ -24,6 +29,8 @@ struct ContentView: View {
                 
                 MainCategoriesView(imageName: "infoIcon",                                 upperText: "Introdution",
                                    lowerText: "Information about the application")
+                
+                Spacer()
                 
                 HStack{
                     Text("Phone information")
@@ -53,10 +60,14 @@ struct ContentView: View {
                         Text("9:18")
                         Text("480 dpi (xxhdpi)")
                     }
+                    
                 }
+                .padding()
                 .foregroundStyle(.white)
                 
+                Spacer()
             }
+            
         }
         .ignoresSafeArea()
         
