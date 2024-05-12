@@ -17,6 +17,7 @@ struct ContentView: View {
         
         ZStack {
             Color.mainBackground
+                .ignoresSafeArea()
             
             VStack{
                 
@@ -26,16 +27,16 @@ struct ContentView: View {
                     
                     MainCategoriesView(imageName: "4pdf",
                                        upperText: "MS Test",
-                                       lowerText: "Testing the display response")
+                                       lowerText: "Testing the display response                    ")
                     
                     MainCategoriesView(imageName: "textIcon",                                 upperText: "Text test",
-                                       lowerText: "Testing the display of text in the display")
+                                       lowerText: "Testing the display of text in the display  ")
                     
                     MainCategoriesView(imageName: "radugaIcon",                               upperText: "Color test",
                                        lowerText: "Testing the display of colors on the display")
                     
                     MainCategoriesView(imageName: "infoIcon",                                 upperText: "Introdution",
-                                       lowerText: "Information about the application")
+                                       lowerText: "Information about the application           ")
                 }
                 
                 Spacer()
@@ -80,7 +81,7 @@ struct ContentView: View {
             }
             
         }
-        .ignoresSafeArea()
+        
         
     }
         
@@ -104,11 +105,13 @@ struct MainCategoriesView: View {
     
     
     var body: some View {
+        
         HStack{
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 45, height: 45)
+                .padding(6)
             
             VStack(alignment: .leading){
                 Text(upperText)

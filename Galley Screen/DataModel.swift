@@ -21,6 +21,7 @@ struct iPhoneModel {
 
 struct iPhoneModelProvider {
     static func modelDetails(for model: String) -> iPhoneModel {
+        
         switch model {
         
         case "Simulator iPhone 15":
@@ -37,9 +38,14 @@ struct iPhoneModelProvider {
                                refreshRate: 60, aspectRatio: "16:9",
                                dpi: 401)
             
-        // Добавьте другие модели аналогично
+        
         default:
-            return iPhoneModel(name: "Unknown", screenSize: "", resolution: "", refreshRate: 0, aspectRatio: "", dpi: 0)
+            return iPhoneModel(name: "Unknown",
+                               screenSize: "",
+                               resolution: "",
+                               refreshRate: 0,
+                               aspectRatio: "",
+                               dpi: 0)
         }
     }
 }
