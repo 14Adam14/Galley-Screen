@@ -11,6 +11,10 @@
 		A3146C972BEDA014000C4C3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3146C962BEDA014000C4C3F /* ContentView.swift */; };
 		A3146C992BEDA018000C4C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3146C982BEDA018000C4C3F /* Assets.xcassets */; };
 		A3146C9D2BEDA018000C4C3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3146C9C2BEDA018000C4C3F /* Preview Assets.xcassets */; };
+		A33F7F7A2BF0583C00448ACB /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F7F792BF0583C00448ACB /* DataModel.swift */; };
+		A33F7F7C2BF05D0000448ACB /* TestTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F7F7B2BF05D0000448ACB /* TestTwo.swift */; };
+		A33F7F7E2BF063F000448ACB /* ModelsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33F7F7D2BF063EF00448ACB /* ModelsData.swift */; };
+		A385A0D02BF0389900884422 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A385A0CF2BF0389900884422 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		A3146C982BEDA018000C4C3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3146C9A2BEDA018000C4C3F /* Galley_Screen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Galley_Screen.entitlements; sourceTree = "<group>"; };
 		A3146C9C2BEDA018000C4C3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A33F7F792BF0583C00448ACB /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		A33F7F7B2BF05D0000448ACB /* TestTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTwo.swift; sourceTree = "<group>"; };
+		A33F7F7D2BF063EF00448ACB /* ModelsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsData.swift; sourceTree = "<group>"; };
+		A385A0CF2BF0389900884422 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				A3146C942BEDA014000C4C3F /* Galley_ScreenApp.swift */,
 				A3146C962BEDA014000C4C3F /* ContentView.swift */,
+				A33F7F792BF0583C00448ACB /* DataModel.swift */,
+				A33F7F7D2BF063EF00448ACB /* ModelsData.swift */,
+				A33F7F7F2BF0720E00448ACB /* all */,
+				A385A0CF2BF0389900884422 /* test.swift */,
 				A3146C982BEDA018000C4C3F /* Assets.xcassets */,
 				A3146C9A2BEDA018000C4C3F /* Galley_Screen.entitlements */,
 				A3146C9B2BEDA018000C4C3F /* Preview Content */,
@@ -67,6 +79,14 @@
 				A3146C9C2BEDA018000C4C3F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A33F7F7F2BF0720E00448ACB /* all */ = {
+			isa = PBXGroup;
+			children = (
+				A33F7F7B2BF05D0000448ACB /* TestTwo.swift */,
+			);
+			path = all;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3146C972BEDA014000C4C3F /* ContentView.swift in Sources */,
+				A33F7F7A2BF0583C00448ACB /* DataModel.swift in Sources */,
+				A385A0D02BF0389900884422 /* test.swift in Sources */,
 				A3146C952BEDA014000C4C3F /* Galley_ScreenApp.swift in Sources */,
+				A33F7F7C2BF05D0000448ACB /* TestTwo.swift in Sources */,
+				A33F7F7E2BF063F000448ACB /* ModelsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,6 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

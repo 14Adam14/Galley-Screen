@@ -1,12 +1,11 @@
 // Adam Kaum on 10.05.2024
 
-
-// через list скорее всего можно создать этот список 
-
-
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    
+    let device = UIDevice.current
     
     var body: some View {
         
@@ -17,18 +16,21 @@ struct ContentView: View {
                 
                     Spacer()
                 
-                MainCategoriesView(imageName: "4pdf",
-                                   upperText: "MS Test",
-                                   lowerText: "Testing the display response")
-                
-                MainCategoriesView(imageName: "textIcon",                                 upperText: "Text test",
-                                   lowerText: "Testing the display of text in the display")
-                
-                MainCategoriesView(imageName: "radugaIcon",                               upperText: "Color test",
-                                   lowerText: "Testing the display of colors on the display")
-                
-                MainCategoriesView(imageName: "infoIcon",                                 upperText: "Introdution",
-                                   lowerText: "Information about the application")
+                VStack(spacing: 15) {
+                    
+                    MainCategoriesView(imageName: "4pdf",
+                                       upperText: "MS Test",
+                                       lowerText: "Testing the display response")
+                    
+                    MainCategoriesView(imageName: "textIcon",                                 upperText: "Text test",
+                                       lowerText: "Testing the display of text in the display")
+                    
+                    MainCategoriesView(imageName: "radugaIcon",                               upperText: "Color test",
+                                       lowerText: "Testing the display of colors on the display")
+                    
+                    MainCategoriesView(imageName: "infoIcon",                                 upperText: "Introdution",
+                                       lowerText: "Information about the application")
+                }
                 
                 Spacer()
                 
@@ -52,8 +54,8 @@ struct ContentView: View {
                     Spacer()
                     
                     VStack(alignment: .trailing){
-                        Text("iPhone 8")
-                        Text("12.3")
+                        Text("\(DataModel.deviceModel)")
+                        Text("\(device.systemVersion)")
                         Text("5.5 inches")
                         Text("1080x1920 px")
                         Text("120 Hz")
@@ -108,6 +110,8 @@ struct MainCategoriesView: View {
             }
             
         }
+        .frame(width: 300, height: 50)
+        .scaledToFit()
         .foregroundStyle(.white)
         .padding(20)
         .clipShape(RoundedRectangle(cornerRadius: 10))
