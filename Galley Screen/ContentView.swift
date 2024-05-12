@@ -5,16 +5,22 @@ import UIKit
 
 struct ContentView: View {
     
+    @State private var currentModel: String = iPhoneModel.deviceModel
+    
     let device = UIDevice.current
+
+    
     
     var body: some View {
+        
+        let model = iPhoneModelProvider.modelDetails(for: currentModel)
         
         ZStack {
             Color.mainBackground
             
             VStack{
                 
-                    Spacer()
+                Spacer()
                 
                 VStack(spacing: 15) {
                     
@@ -53,14 +59,17 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    VStack(alignment: .trailing){
-                        Text("\(DataModel.deviceModel)")
+                    VStack(alignment: .trailing) {
+                        
+                        Text("\(iPhoneModel.deviceModel)")
                         Text("\(device.systemVersion)")
-                        Text("5.5 inches")
-                        Text("1080x1920 px")
-                        Text("120 Hz")
-                        Text("9:18")
-                        Text("480 dpi (xxhdpi)")
+                    
+                        Text(model.screenSize)
+                        Text("\(model.resolution) px")
+                        Text("\(model.refreshRate) Hz")
+                        Text(model.aspectRatio)
+                        Text("\(model.dpi) (xxhdpi)")
+                        
                     }
                     
                 }
@@ -73,8 +82,10 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         
-        
     }
+        
+   
+   
 }
 
 #Preview {

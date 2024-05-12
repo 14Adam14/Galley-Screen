@@ -13,7 +13,7 @@ struct test: View {
             
             //Text("Device: \(modelName)")
            // Text("Device model: \(DeviceInfo.model)")
-            Text("\(DataModel.deviceModel)")
+            Text("\(iPhoneModel.deviceModel)")
         }
     }
 }
